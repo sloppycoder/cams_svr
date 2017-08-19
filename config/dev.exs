@@ -35,9 +35,5 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :cams_svr, CamsSvr.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
-  database: "cams_svr_dev",
-  hostname: "localhost",
-  pool_size: 10
+  adapter: Sqlite.Ecto2,
+  database: ":memory:"
